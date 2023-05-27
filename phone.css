@@ -1,49 +1,69 @@
-* {
-    margin: 0px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans&display=swap');
+.noto {font-family: 'Noto Sans', sans-serif;}
+
+* {margin: 0;}
+
 
 /* 모바일에 적용될 스타일 */
-@media (max-width: 767px){
-body {width: auto;}
+@media (max-width: 1080px){
+body {width: auto; overflow: hidden;}
 .header {width: auto; float: none;}
 .main-wrapper {width: auto; float: none;}
+.nav {line-height: 1.4em;}
 }
 
 /* 데스크탑에서 적용될 스타일 */
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
 body {width: auto; overflow: hidden;}
-.header {width: 300px; height: 100%; float: left;}
-.main-wrapper {width: auto; float: right;}
-    .menu-button {
-        display: none;
-    }
+.header {
+    position: absolute;
+    width: 25rem; 
+    height: 100%; 
+    float: left;
 }
+.main-wrapper {width: auto; float: right;}
+.menu-button {display: none;}
+.nav {line-height: 2em;}
+
+}
+
 
 body {
-    width: 100vw;
-    height: 100vh;
-    background-color: brown;
+    background-color: rgb(246, 245, 250);
 }
 
-.h1 {
-    top: 2rem;
+a {text-decoration: none; color: inherit}
+
+h1 {
     position: relative;
+    font-size: 2rem;
 }
 
-
+.dis-none {display: none;}
 
 .header {
+    font-size: 1rem;
     text-align: center;
-    background-color: green;
+    background-color: rgb(242, 200, 63);
     padding: 1.5rem;
 }
 
-
-h1 {
-    font-size: 2.2rem;
+.nav {
+    font-size: 1.7em;
+}
+.nav>p>a {
+    cursor: pointer;
 }
 
 .menu-button{
+    font-size: 1.1rem;
+    font-weight: 700;
     position: absolute;
-    left: 95%;
+    right: 0.6em;
+    top: 1.25em;
+    padding: 0.5rem;
+    border: solid 0.1rem white;
+    border-radius: 0.3em;
+    z-index: 10;
 }
+.menu-button:hover{cursor: pointer;}
