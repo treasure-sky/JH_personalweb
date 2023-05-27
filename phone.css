@@ -1,0 +1,49 @@
+* {
+    margin: 0px;
+}
+
+/* 모바일에 적용될 스타일 */
+@media (max-width: 767px){
+body {width: auto;}
+.header {width: auto; float: none;}
+.main-wrapper {width: auto; float: none;}
+}
+
+/* 데스크탑에서 적용될 스타일 */
+@media (min-width: 768px) {
+body {width: auto; overflow: hidden;}
+.header {width: 300px; height: 100%; float: left;}
+.main-wrapper {width: auto; float: right;}
+    .menu-button {
+        display: none;
+    }
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: brown;
+}
+
+.h1 {
+    top: 2rem;
+    position: relative;
+}
+
+
+
+.header {
+    text-align: center;
+    background-color: green;
+    padding: 1.5rem;
+}
+
+
+h1 {
+    font-size: 2.2rem;
+}
+
+.menu-button{
+    position: absolute;
+    left: 95%;
+}
