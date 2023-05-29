@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Jinho Lee - Personal Website</title>
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1">
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script src="./js.js"></script>
 <link rel="stylesheet" href="./phone.css">
+
 </head>
+
 <body>
-    <div class="header noto">
-        <div class="menu-button">menu</div>
-        <h1><a href="./index.html">Jinho's Blog</a></h1>
-        <div class="nav">
-            <br>
-            <p><a>About me</a></p>
-            <p><a>Interest</a></p>
-            <p><a>gallery</a></p>
-            <p><a>sns link</a></p>
+
+<!-- header -->
+<div class="header noto">
+    <div class="menu-button">menu</div>
+    <h1><a href="./index.html">Jinho's Blog</a></h1>
+    <div class="nav">
+        <hr>
+        <p><a>About me</a></p>
+        <p><a>Interest</a></p>
+        <p><a>gallery</a></p>
+        <p><a>sns link</a></p>
+    </div>
+</div>
+
+<!-- about me -->
+<div class="main-wrapper" id="aboutme">
+    <div id="aboutme-title">
+        <p class="motto">
+            "For <span class="highlight">tomorrow</span>
+        </p>
+        <p class="motto">
+            better than <span class="highlight">today</span>"
+        </p>
+    </div>
+    <div id="aboutme-subtitle">
+        <div id="img-profile">
+            <img src="./photo/assets/jinhoprofile.jpeg" alt="profile">
+        </div>
+        <div id="profile-text">
+            <span>안녕하세요</span>
+            <br/>
+            <div id="changingmotto"></div>
+            <span class="highlight" style="font-weight: 900">이진호</span>
+            입니다.
         </div>
     </div>
-    
-    <div class="main-wrapper">
-
+    <div id="aboutme-text">
+        <br>
+        <p>현재 강원대 컴퓨터공학과에 재학중이며 프로그래밍, CS를 배우는 중입니다.
+            웹프로그래밍에 관심이 많고 최근에는 Spring를 사용해 백앤드를 공부하고 있습니다. 
+        </p>
+        <br>
+        <p class="bold">Tech Stack</p>
+        <br>
+        <div id="img-techstack">
+            <img src="./photo/assets/stack.png" alt="tech stack">
+        </div>
     </div>
+</div>
+<!-- end of about me -->
+<div class="main-wrapper" id="aboutme"></div>
 
-    
 </body>
 </html>

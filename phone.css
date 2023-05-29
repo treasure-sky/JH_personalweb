@@ -1,51 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+@font-face {
+    font-family: "NanumSquareNeo-Variable";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2")
+      format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
 .noto {font-family: 'Noto Sans', sans-serif;}
 
 * {margin: 0;}
 
 
 /* 모바일에 적용될 스타일 */
+
 @media (max-width: 1080px){
-body {width: auto; overflow: hidden;}
 .header {width: auto; float: none;}
-.main-wrapper {width: auto; float: none;}
 .nav {line-height: 1.4em;}
+#aboutme-title{line-height: 3.5em; margin-bottom: 2em;}
+.motto {font-size: 3em;}
+#profile-text {
+    font-size: 2em;
+}
 }
 
+/* 모바일에 적용될 스타일 끝 */
+
 /* 데스크탑에서 적용될 스타일 */
+
 @media (min-width: 1080px) {
-body {width: auto; overflow: hidden;}
 .header {
     position: absolute;
-    width: 25rem; 
+    width: 25em; 
     height: 100%; 
     float: left;
 }
-.main-wrapper {width: auto; float: right;}
 .menu-button {display: none;}
 .nav {line-height: 2em;}
-
+.main-wrapper{
+    position: absolute; 
+    left: 28em;
+    width: calc(100% - 32em);
 }
+#aboutme-title{
+    line-height: 6em;
+    margin-bottom: 2em;
+}
+
+.motto {font-size: 4em;}
+#img-profile {padding: 0 3em;}
+#profile-text {font-size: 2em;}
+}
+
+/* 데스크탑에 적용될 스타일 끝 */
 
 
 body {
     background-color: rgb(246, 245, 250);
+    width: 100vw;
+    overflow: hidden;
 }
 
 a {text-decoration: none; color: inherit}
 
 h1 {
     position: relative;
-    font-size: 2rem;
+    font-size: 1.8em;
+}
+
+.nav>hr{
+    margin-block: 1em;
+    margin-inline: 5em;
+    border-width: 0.05em;
+    border-style: solid;
 }
 
 .dis-none {display: none;}
 
 .header {
-    font-size: 1rem;
+    font-size: 1em;
     text-align: center;
     background-color: rgb(242, 200, 63);
-    padding: 1.5rem;
+    padding: 1.5em;
 }
 
 .nav {
@@ -60,10 +96,65 @@ h1 {
     font-weight: 700;
     position: absolute;
     right: 0.6em;
-    top: 1.25em;
+    top: 1.35em;
     padding: 0.5rem;
     border: solid 0.1rem white;
     border-radius: 0.3em;
     z-index: 10;
 }
 .menu-button:hover{cursor: pointer;}
+
+.main-wrapper{
+    margin: auto;
+    padding: 2rem;
+}
+
+.highlight {
+    background: linear-gradient(to top, rgb(254, 198, 17) 40%, transparent 40%);
+}
+
+.motto {
+    font-family: "Delicious Handrawn", cursive;
+}
+
+#aboutme-title {
+    text-align: center;
+}
+
+#aboutme-subtitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#img-profile {
+    width: 23em;
+}   
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#profile-text {
+    margin-top: 1em;
+    width: 11.5em;
+    font-family: "NanumSquareNeo-Variable";
+    line-height: 1.5em;
+}
+
+#aboutme-text {
+    max-width: 46em;
+    margin: auto;
+    color: #4f4f4f;
+}
+.bold {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+#img-techstack {
+    width: 20em;
+}
