@@ -1,3 +1,5 @@
+/* aboutme subtitle 변화 */
+
 var changemotto = ["매일매일 성장하는", "요리를 좋아하는", "자기개발하는", "사진 찍는 것을 좋아하는", "배움을 즐기는", "하고 싶은게 많은"];
 var c = -1;
 function timeCount(){
@@ -6,6 +8,12 @@ function timeCount(){
 }
 
 $(document).ready(function(){
+    /* 최초 실행시 about me 만 표시 */
+    $('#interest').hide(0);
+    $('#gallery').hide(0);
+    $('#aboutme').show(0);
+
+    /* 최초 실행시 화면크기에 따라 nav 표시여부 결정 */
     if($(window).width() >= 1080){
         $('.nav').show(0);
     }
@@ -24,7 +32,35 @@ $(document).ready(function(){
             $('.nav').hide(0);
         }
     })
-    
     timeCount();
+
+    /* nav 요소 클릭시 페이지 전환 (SPA로 구현) */
+    $('#link-aboutme').click(function(){
+        $('#interest').hide(0);
+        $('#gallery').hide(0);
+        $('#aboutme').show(0);
+        if($(window).width() < 1080){
+            $('.nav').slideToggle(700);
+        }
+    })
+    
+    $('#link-interest').click(function(){
+        $('#aboutme').hide(0);
+        $('#gallery').hide(0);
+        $('#interest').show(0);
+        if($(window).width() < 1080){
+            $('.nav').slideToggle(700);
+        }
+    })
+
+    $('#link-gallery').click(function(){
+        $('#aboutme').hide(0);
+        $('#interest').hide(0);
+        $('#gallery').show(0);
+        if($(window).width() < 1080){
+            $('.nav').slideToggle(700);
+        }
+    })
+
 
 })
