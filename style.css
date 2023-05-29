@@ -41,7 +41,7 @@
 .main-wrapper{
     position: absolute; 
     left: 28em;
-    width: calc(100% - 32em);
+    width: calc(100% - 31em);
     height: 94.5vh;
 }
 #aboutme-title{
@@ -106,7 +106,7 @@ h1 {
 
 .main-wrapper{
     margin: auto;
-    padding: 2rem;
+    padding: 2em;
     overflow-y: scroll;
 }
 
