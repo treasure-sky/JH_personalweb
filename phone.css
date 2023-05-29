@@ -59,6 +59,7 @@ body {
     background-color: rgb(246, 245, 250);
     width: 100vw;
     overflow: hidden;
+    overflow-y: scroll;
 }
 
 a {text-decoration: none; color: inherit}
