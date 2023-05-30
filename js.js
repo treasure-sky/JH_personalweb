@@ -8,10 +8,6 @@ function timeCount(){
 }
 
 $(document).ready(function(){
-    /* 최초 실행시 about me 만 표시 */
-    $('#interest').hide(0);
-    $('#gallery').hide(0);
-    $('#aboutme').show(0);
 
     /* 최초 실행시 화면크기에 따라 nav 표시여부 결정 */
     if($(window).width() >= 1080){
@@ -36,27 +32,27 @@ $(document).ready(function(){
 
     /* nav 요소 클릭시 페이지 전환 (SPA로 구현) */
     $('#link-aboutme').click(function(){
-        $('#interest').hide(0);
-        $('#gallery').hide(0);
-        $('#aboutme').show(0);
+        $('#interest').addClass('dis-none')
+        $('#gallery').addClass('dis-none')
+        $('#aboutme').removeClass('dis-none')
         if($(window).width() < 1080){
             $('.nav').slideToggle(700);
         }
     })
     
     $('#link-interest').click(function(){
-        $('#aboutme').hide(0);
-        $('#gallery').hide(0);
-        $('#interest').show(0);
+        $('#interest').removeClass('dis-none')
+        $('#gallery').addClass('dis-none')
+        $('#aboutme').addClass('dis-none')
         if($(window).width() < 1080){
             $('.nav').slideToggle(700);
         }
     })
 
     $('#link-gallery').click(function(){
-        $('#aboutme').hide(0);
-        $('#interest').hide(0);
-        $('#gallery').show(0);
+        $('#interest').addClass('dis-none')
+        $('#gallery').removeClass('dis-none')
+        $('#aboutme').addClass('dis-none')
         if($(window).width() < 1080){
             $('.nav').slideToggle(700);
         }
